@@ -2,18 +2,18 @@
 
 This is the backend of the ecommerce application used on the course.
 
-## Installation
+## Compile
 
 Use the package manager [npm](https://www.npmjs.com/) to install the dependencies used on this project.
 
 ```bash
-npm install
+npm run build
 ```
 
 ## Usage
 
 ```bash
-node index.js
+npm start
 ```
 
 ## Contributing
