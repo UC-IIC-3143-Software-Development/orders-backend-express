@@ -14,23 +14,21 @@ When the team accepts an ADR, it becomes immutable. If new insights require a di
 
 Project members should create an ADR for every architecturally significant decision that affects the software project or product, including the following (Richards and Ford 2020):
 
-* Structure (for example, patterns such as microservices)
+- Structure (for example, patterns such as microservices)
 
-* Non-functional requirements (security, high availability, and fault tolerance)
+- Non-functional requirements (security, high availability, and fault tolerance)
 
-* Dependencies (coupling of components)
+- Dependencies (coupling of components)
 
-* Interfaces (APIs and published contracts)
+- Interfaces (APIs and published contracts)
 
-* Construction techniques (libraries, frameworks, tools, and processes)
+- Construction techniques (libraries, frameworks, tools, and processes)
 
-* Functional and non-functional requirements are the most common inputs to the ADR process.
-
+- Functional and non-functional requirements are the most common inputs to the ADR process.
 
 ## ADR contents
 
 When the team identifies a need for an ADR, a team member starts to write the ADR based on a projectwide template. (See the ADR GitHub organization for example templates.) The template simplifies ADR creation and ensures that the ADR captures all the relevant information. At a minimum, each ADR should define the context of the decision, the decision itself, and the consequences of the decision for the project and its deliverables. (For examples of these sections, see the appendix.) One of the most powerful aspects of the ADR structure is that it focuses on the reason for the decision rather than how the team implemented it. Understanding why the team made the decision makes it easier for other team members to adopt the decision, and prevents other architects who weren’t involved in the decision-making process to overrule that decision in the future.
-
 
 ## ADR adoption process
 
@@ -50,7 +48,6 @@ ADRs and the decision log they create represent decisions made by the team and p
 
 As a good practice, each software change should go through peer reviews and require at least one approval. During the code review, a code reviewer might find changes that violate one or more ADRs. In this case, the reviewer asks the author of the code change to update the code, and shares a link to the ADR. When the author updates the code, it is approved by peer reviewers and merged into the main code base.
 
-
 ## ADR review process
 
-The team should treat ADRs as immutable documents after the team accepts or rejects them. Changes to an existing ADR requires creating a new ADR, establishing a review process for the new ADR, and approving the ADR. If the team approves the new ADR, the owner should change the state of the old ADR to **Superseded**. 
+The team should treat ADRs as immutable documents after the team accepts or rejects them. Changes to an existing ADR requires creating a new ADR, establishing a review process for the new ADR, and approving the ADR. If the team approves the new ADR, the owner should change the state of the old ADR to **Superseded**.
