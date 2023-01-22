@@ -1,0 +1,29 @@
+version: "3.9"
+services:
+  orders-api:
+    platform: linux/x86_64 # Critical so Prisma runs correctly on a M1 Mac
+    build: ./
+    environment:
+      NODE_ENV: development
+    ports:
+      - "8000:8000"
+      - "9240:9240" # Node inspect
+    volumes:
+      - ./:/home/app/api
+      - /home/app/api/node_modules
+    working_dir: /home/app/api
+    restart: on-failure
+    depends_on:
+      - orders-db
+  orders-db:
+    image: postgres:15.1
+    environment:
+      - POSTGRES_DB=orders
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_HOST_AUTH_METHOD=trust
+      - PGDATA=/var/lib/postgresql/data/pgdata # Critical for Postgres to work in the container
+    volumes:
+      - ./db/data/postgres:/var/lib/postgresql
+    ports:
+      - "5432:5432"
