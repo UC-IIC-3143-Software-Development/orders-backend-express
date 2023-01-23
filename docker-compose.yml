@@ -2,7 +2,9 @@ version: "3.9"
 services:
   orders-api:
     platform: linux/x86_64 # Critical so Prisma runs correctly on a M1 Mac
-    build: ./
+    build:
+      context: .
+      dockerfile: .docker/Dockerfile
     environment:
       NODE_ENV: development
     ports:
