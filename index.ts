@@ -10,6 +10,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 const port = process.env.PORT;
+console.log(`The connection URL is ${process.env.DATABASE_URL}`);
 
 app.get("/health", (req: Request, res: Response) => {
   res.send("Ok");
