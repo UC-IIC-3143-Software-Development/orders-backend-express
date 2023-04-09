@@ -25,11 +25,11 @@ Please make sure to update tests as appropriate.
 
 ## Generate .env
 
-DATABASE_URL=postgresql://user:password@localhost:5432/orders
+1. Copy local.env to env
+2. Run migrations from the container
 
-execute migrations
-
-"prisma:migrate": "prisma migrate dev",
+docker exec -it orders-backend-express_orders-api_1 sh
+npm run prisma:migrate
 
 ## License
 
