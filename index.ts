@@ -1,6 +1,7 @@
 import express, { Request, Response } from "express";
 import dotenv from "dotenv";
 import prisma from "./prisma";
+import { getAllUsersController } from "./src/controller/UserController";
 
 dotenv.config();
 
@@ -16,10 +17,7 @@ app.get("/health", (req: Request, res: Response) => {
   res.send("Ok");
 });
 
-app.get("/users", async (req, res) => {
-  const users = await prisma.user.findMany();
-  res.json(users);
-});
+app.get("/users", getAllUsersController);
 
 app.post("/user", async (req, res) => {
   const { firstName, lastName } = req.body;
