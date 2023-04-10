@@ -1,5 +1,5 @@
-import { UserRepository } from "../repository/UserRepository";
-import { UserResponse, UserStatus } from "../domain/UserResponse";
+import { UserRepository } from '../repository/UserRepository';
+import { UserResponse, UserStatus } from '../domain/UserResponse';
 
 export class UserService {
   constructor(private readonly userRepository: UserRepository) {}

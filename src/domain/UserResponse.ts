@@ -1,8 +1,8 @@
-import { User as PrismaUser } from "@prisma/client";
+import { User as PrismaUser } from '@prisma/client';
 
 export enum UserStatus {
-  ValidUser = "valid_user",
-  ErrorUser = "error_user",
+  ValidUser = 'valid_user',
+  ErrorUser = 'error_user',
 }
 
 export interface User {
